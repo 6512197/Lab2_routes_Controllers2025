@@ -3,11 +3,11 @@ import ProductController from '../controllers/ProductController.js'
 import RestaurantController from '../controllers/RestaurantController.js'
 
 const loadFileRoutes = function (app) {
+  // map an action with app.
   app.route('/restaurants')
     .get(
       RestaurantController.index)
     .post(
-    // TODO: Add needed middlewares
       RestaurantController.create)
 
   app.route('/restaurants/:restaurantId')
