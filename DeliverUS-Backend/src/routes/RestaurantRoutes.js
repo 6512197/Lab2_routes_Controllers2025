@@ -1,5 +1,5 @@
-import OrderController from '../controllers/OrderController.js'
-import ProductController from '../controllers/ProductController.js'
+// import OrderController from '../controllers/OrderController.js'
+// import ProductController from '../controllers/ProductController.js'
 import RestaurantController from '../controllers/RestaurantController.js'
 
 const loadFileRoutes = function (app) {
