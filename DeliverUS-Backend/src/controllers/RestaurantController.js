@@ -18,8 +18,8 @@ const index = async function (req, res) {
     res.status(500).send(err)
   }
 }
-
-const indexOwner = async function (req, res) {
+// this one is for the Owner:
+/* const indexOwner = async function (req, res) {
   try {
     const restaurants = await Restaurant.findAll(
       {
@@ -35,10 +35,12 @@ const indexOwner = async function (req, res) {
     res.status(500).send(err)
   }
 }
+*/
 
 const create = async function (req, res) {
   const newRestaurant = Restaurant.build(req.body)
-  // newRestaurant.userId = req.user.id // usuario actualmente autenticado
+  // newRestaurant.userId = req.user.id
+  // we put uno por default;
   newRestaurant.userId = 1
   try {
     const restaurant = await newRestaurant.save()
@@ -98,7 +100,7 @@ const destroy = async function (req, res) {
 
 const RestaurantController = {
   index,
-  indexOwner,
+  // indexOwner,
   create,
   show,
   update,
